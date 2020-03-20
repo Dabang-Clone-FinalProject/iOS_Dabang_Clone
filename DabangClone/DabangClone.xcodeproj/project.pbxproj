@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1516002F24247BA20003DDCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516002E24247BA20003DDCF /* AppDelegate.swift */; };
+		1516003324247BA20003DDCF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516003224247BA20003DDCF /* LoginViewController.swift */; };
+		1516003824247BA20003DDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1516003724247BA20003DDCF /* Assets.xcassets */; };
+		1516004724247F080003DDCF /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1516004624247F080003DDCF /* KakaoOpenSDK.framework */; };
+		15160049242483730003DDCF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15160048242483730003DDCF /* MainViewController.swift */; };
+		1516004B242495FE0003DDCF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516004A242495FE0003DDCF /* Extensions.swift */; };
+		AAD0A9599381D7CA708D6E31 /* Pods_DabangClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B70ED9EB0B15C4D6FEDE4D /* Pods_DabangClone.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1516002B24247BA20003DDCF /* DabangClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DabangClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1516002E24247BA20003DDCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1516003224247BA20003DDCF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1516003724247BA20003DDCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1516003C24247BA20003DDCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1516004624247F080003DDCF /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		15160048242483730003DDCF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1516004A242495FE0003DDCF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3AEABCBF869ADF9D5DC4566F /* Pods-DabangClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DabangClone.release.xcconfig"; path = "Target Support Files/Pods-DabangClone/Pods-DabangClone.release.xcconfig"; sourceTree = "<group>"; };
+		90B70ED9EB0B15C4D6FEDE4D /* Pods_DabangClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DabangClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF6E307BB0DBA8293AA6779F /* Pods-DabangClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DabangClone.debug.xcconfig"; path = "Target Support Files/Pods-DabangClone/Pods-DabangClone.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1516002824247BA20003DDCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAD0A9599381D7CA708D6E31 /* Pods_DabangClone.framework in Frameworks */,
+				1516004724247F080003DDCF /* KakaoOpenSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AACEC556279AE83F968414F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF6E307BB0DBA8293AA6779F /* Pods-DabangClone.debug.xcconfig */,
+				3AEABCBF869ADF9D5DC4566F /* Pods-DabangClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1516002224247BA20003DDCF = {
+			isa = PBXGroup;
+			children = (
+				1516002D24247BA20003DDCF /* DabangClone */,
+				1516002C24247BA20003DDCF /* Products */,
+				0AACEC556279AE83F968414F /* Pods */,
+				CE53DD3DED8300E7499EB70D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1516002C24247BA20003DDCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1516002B24247BA20003DDCF /* DabangClone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1516002D24247BA20003DDCF /* DabangClone */ = {
+			isa = PBXGroup;
+			children = (
+				1516002E24247BA20003DDCF /* AppDelegate.swift */,
+				1516003224247BA20003DDCF /* LoginViewController.swift */,
+				15160048242483730003DDCF /* MainViewController.swift */,
+				1516004A242495FE0003DDCF /* Extensions.swift */,
+				1516003724247BA20003DDCF /* Assets.xcassets */,
+				1516003C24247BA20003DDCF /* Info.plist */,
+			);
+			path = DabangClone;
+			sourceTree = "<group>";
+		};
+		CE53DD3DED8300E7499EB70D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90B70ED9EB0B15C4D6FEDE4D /* Pods_DabangClone.framework */,
+				1516004624247F080003DDCF /* KakaoOpenSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1516002A24247BA20003DDCF /* DabangClone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1516003F24247BA20003DDCF /* Build configuration list for PBXNativeTarget "DabangClone" */;
+			buildPhases = (
+				616046A061F4300A84F784D8 /* [CP] Check Pods Manifest.lock */,
+				1516002724247BA20003DDCF /* Sources */,
+				1516002824247BA20003DDCF /* Frameworks */,
+				1516002924247BA20003DDCF /* Resources */,
+				364082F24D85FC042AD2C283 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DabangClone;
+			productName = DabangClone;
+			productReference = 1516002B24247BA20003DDCF /* DabangClone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1516002324247BA20003DDCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = pandaman;
+				TargetAttributes = {
+					1516002A24247BA20003DDCF = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 1516002624247BA20003DDCF /* Build configuration list for PBXProject "DabangClone" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1516002224247BA20003DDCF;
+			productRefGroup = 1516002C24247BA20003DDCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1516002A24247BA20003DDCF /* DabangClone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1516002924247BA20003DDCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1516003824247BA20003DDCF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		364082F24D85FC042AD2C283 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DabangClone/Pods-DabangClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DabangClone/Pods-DabangClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DabangClone/Pods-DabangClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		616046A061F4300A84F784D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DabangClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1516002724247BA20003DDCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1516003324247BA20003DDCF /* LoginViewController.swift in Sources */,
+				1516002F24247BA20003DDCF /* AppDelegate.swift in Sources */,
+				15160049242483730003DDCF /* MainViewController.swift in Sources */,
+				1516004B242495FE0003DDCF /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1516003D24247BA20003DDCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1516003E24247BA20003DDCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1516004024247BA20003DDCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF6E307BB0DBA8293AA6779F /* Pods-DabangClone.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = DabangClone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				OTHER_LIBTOOLFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tistory.iospanda.DabangClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1516004124247BA20003DDCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AEABCBF869ADF9D5DC4566F /* Pods-DabangClone.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = DabangClone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				OTHER_LIBTOOLFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tistory.iospanda.DabangClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1516002624247BA20003DDCF /* Build configuration list for PBXProject "DabangClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1516003D24247BA20003DDCF /* Debug */,
+				1516003E24247BA20003DDCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1516003F24247BA20003DDCF /* Build configuration list for PBXNativeTarget "DabangClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1516004024247BA20003DDCF /* Debug */,
+				1516004124247BA20003DDCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1516002324247BA20003DDCF /* Project object */;
+}
