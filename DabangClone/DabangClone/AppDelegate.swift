@@ -8,44 +8,60 @@
 
 import UIKit
 import KakaoOpenSDK
-
+import FBSDKLoginKit
+import FBSDKShareKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let loginVC = LoginViewController()
-        
-        window?.rootViewController = loginVC
-        window?.makeKeyAndVisible()
-        
-        KOSession.shared()?.isAutomaticPeriodicRefresh = true
-        
-        return true
-    }
+  
+  var window: UIWindow?
+  
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    // Override point for customization after application launch.
+    window = UIWindow(frame: UIScreen.main.bounds)
     
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        KOSession.handleDidEnterBackground()
-    }
-
-
+    let loginVC = LoginViewController()
     
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-       if KOSession.handleOpen(url) {
-          return true
-       }
-          return false
+    window?.rootViewController = loginVC
+    window?.makeKeyAndVisible()
+    ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+    KOSession.shared()?.isAutomaticPeriodicRefresh = true
+    
+    return true
+  }
+  
+  func applicationDidEnterBackground(_ application: UIApplication) {
+    KOSession.handleDidEnterBackground()
+  }
+  
+  
+  
+  func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+    if KOSession.handleOpen(url) || ApplicationDelegate.shared.application(
+      application,
+      open: url,
+      sourceApplication: sourceApplication,
+      annotation: annotation
+      ) {
+      return true
     }
-    internal func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
-       if KOSession.handleOpen(url) {
-          return true
-       }
-          return false
+    return false
+  }
+  @available(iOS 9.0, *)
+  internal func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+    if KOSession.handleOpen(url) || ApplicationDelegate.shared.application(app, open: url, options: options) {
+      return true
     }
-
+    return false
+  }
+  
+  
+  
+  
+  
+  
+  func applicationDidBecomeActive(_ application: UIApplication) {
+    AppEvents.activateApp()
+  }
+  
 }
 

@@ -6,7 +6,9 @@ target 'DabangClone' do
   use_frameworks!
 
   # Pods for DabangClone
-
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
   pod 'SnapKit'
   pod 'RxSwift'
   pod 'RxCocoa'

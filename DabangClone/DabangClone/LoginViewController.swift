@@ -11,6 +11,8 @@ import KakaoOpenSDK
 import SnapKit
 import Then
 import Alamofire
+import FBSDKLoginKit
+import FBSDKShareKit
 //import Kingfisher
 //import Facebook
 //import RxSwift
@@ -21,7 +23,6 @@ class LoginViewController: UIViewController {
   
   //MARK: KakaoLogin Session
   let session = KOSession.shared()
-  
   //MARK: Property
   let dabangLogoImage = UIImageView().then {
     $0.image = UIImage(named: "dabangLogo")
@@ -34,7 +35,9 @@ class LoginViewController: UIViewController {
   }
   
   
+  //MARK: 페이스북 로그인 버튼
   let facebookLoginButton = UIButton().then {
+    $0.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     $0.setBackgroundImage(UIImage(named: "FacebookButtonImage"), for: .normal)
   }
   
@@ -265,5 +268,75 @@ class LoginViewController: UIViewController {
     
     
   }
+  //MARK: - Facebook Login
+  @objc private func didTapButton() {
+    print("페이스북 로그인")
+    
+    let loginManager = LoginManager()
+    loginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, err) in
+      //      guard let result = result else { return }
+      //      self.loginManagerDidComplete(result)
+      
+      if let err = err {
+        print(err.localizedDescription)
+        return
+      }
+      guard let result = result, let token : AccessToken = result.token else { return }
+      //      guard let token: AccessToken = result?.token else {
+      //        print("There is no token in Facebook sign in.")
+      //        return
+      //      }
+      if(result.isCancelled) {
+        print("isCancelled")
+        //Show Cancel alert
+      } else if(result.grantedPermissions.contains("email")) {
+        self.returnUserData()
+        self.postFacebookToken(Token: token.tokenString)
+        let mainVC = MainViewController()
+        
+        self.present(mainVC, animated: false, completion: nil)
+        //        print(token.appID, token.graphDomain, token.tokenString)
+      }
+    }
+  }
+  
+  func postFacebookToken(Token: String) {
+    let facebookToken = Token
+    let param: Parameters = [
+      "username" : "admin",
+      "password" : "admin123"
+    ]
+    //        let url = URL(string: "https://moonpeter.com/members/facebookToken/")
+    let url = URL(string: "https://moonpeter.com/api/token/")
+    
+    AF.request(url!, method: .post, parameters: param, encoding: URLEncoding.httpBody, headers: .none, interceptor: .none).responseString { response in
+      print("성공? :", response.result)
+      //            let resultString =  response.result
+    }
+  }
+  
+  
+  
+  func returnUserData() {
+    let graphRequest : GraphRequest = GraphRequest(graphPath: "me", parameters: ["fields":"email,name"])
+    graphRequest.start(completionHandler: { (connection, result, error) -> Void in
+      if ((error) != nil) {
+        // Process error
+        print("\n\n Error: \(String(describing: error))")
+      } else {
+        let resultDic = result as! NSDictionary
+        print("\n\n  fetched user: \(String(describing: result))")
+        if (resultDic.value(forKey:"name") != nil) {
+          let userName = resultDic.value(forKey:"name")! as! String
+          print("\n User Name is: \(String(describing: userName))")
+        }
+        
+        if (resultDic.value(forKey:"email") != nil) {
+          let userEmail = resultDic.value(forKey:"email")! as! String
+          print("\n User Email is: \(String(describing: userEmail))")
+        }
+      }
+    })
+  }
+  
 }
-
