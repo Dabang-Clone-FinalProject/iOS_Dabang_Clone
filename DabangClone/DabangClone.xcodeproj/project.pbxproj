@@ -11,8 +11,14 @@
 		1516003324247BA20003DDCF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516003224247BA20003DDCF /* LoginViewController.swift */; };
 		1516003824247BA20003DDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1516003724247BA20003DDCF /* Assets.xcassets */; };
 		1516004724247F080003DDCF /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1516004624247F080003DDCF /* KakaoOpenSDK.framework */; };
-		15160049242483730003DDCF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15160048242483730003DDCF /* MainViewController.swift */; };
+		15160049242483730003DDCF /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15160048242483730003DDCF /* MainTabBarViewController.swift */; };
 		1516004B242495FE0003DDCF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516004A242495FE0003DDCF /* Extensions.swift */; };
+		1516004D24285FCB0003DDCF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516004C24285FCB0003DDCF /* SignUpViewController.swift */; };
+		1516004F24287E450003DDCF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516004E24287E450003DDCF /* HomeViewController.swift */; };
+		1516005124287E620003DDCF /* FavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516005024287E620003DDCF /* FavoriteListViewController.swift */; };
+		1516005324287E6F0003DDCF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516005224287E6F0003DDCF /* MapViewController.swift */; };
+		1516005524287ED40003DDCF /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516005424287ED40003DDCF /* SaleViewController.swift */; };
+		1516005724287EDC0003DDCF /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516005624287EDC0003DDCF /* MoreViewController.swift */; };
 		AAD0A9599381D7CA708D6E31 /* Pods_DabangClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B70ED9EB0B15C4D6FEDE4D /* Pods_DabangClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,8 +29,14 @@
 		1516003724247BA20003DDCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1516003C24247BA20003DDCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1516004624247F080003DDCF /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
-		15160048242483730003DDCF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		15160048242483730003DDCF /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		1516004A242495FE0003DDCF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1516004C24285FCB0003DDCF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1516004E24287E450003DDCF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1516005024287E620003DDCF /* FavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewController.swift; sourceTree = "<group>"; };
+		1516005224287E6F0003DDCF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1516005424287ED40003DDCF /* SaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleViewController.swift; sourceTree = "<group>"; };
+		1516005624287EDC0003DDCF /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		3AEABCBF869ADF9D5DC4566F /* Pods-DabangClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DabangClone.release.xcconfig"; path = "Target Support Files/Pods-DabangClone/Pods-DabangClone.release.xcconfig"; sourceTree = "<group>"; };
 		90B70ED9EB0B15C4D6FEDE4D /* Pods_DabangClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DabangClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6E307BB0DBA8293AA6779F /* Pods-DabangClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DabangClone.debug.xcconfig"; path = "Target Support Files/Pods-DabangClone/Pods-DabangClone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,8 +86,14 @@
 			isa = PBXGroup;
 			children = (
 				1516002E24247BA20003DDCF /* AppDelegate.swift */,
+				1516004E24287E450003DDCF /* HomeViewController.swift */,
+				1516005024287E620003DDCF /* FavoriteListViewController.swift */,
 				1516003224247BA20003DDCF /* LoginViewController.swift */,
-				15160048242483730003DDCF /* MainViewController.swift */,
+				1516005224287E6F0003DDCF /* MapViewController.swift */,
+				1516005424287ED40003DDCF /* SaleViewController.swift */,
+				1516005624287EDC0003DDCF /* MoreViewController.swift */,
+				15160048242483730003DDCF /* MainTabBarViewController.swift */,
+				1516004C24285FCB0003DDCF /* SignUpViewController.swift */,
 				1516004A242495FE0003DDCF /* Extensions.swift */,
 				1516003724247BA20003DDCF /* Assets.xcassets */,
 				1516003C24247BA20003DDCF /* Info.plist */,
@@ -205,10 +223,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1516005124287E620003DDCF /* FavoriteListViewController.swift in Sources */,
 				1516003324247BA20003DDCF /* LoginViewController.swift in Sources */,
 				1516002F24247BA20003DDCF /* AppDelegate.swift in Sources */,
-				15160049242483730003DDCF /* MainViewController.swift in Sources */,
+				15160049242483730003DDCF /* MainTabBarViewController.swift in Sources */,
+				1516005524287ED40003DDCF /* SaleViewController.swift in Sources */,
+				1516005724287EDC0003DDCF /* MoreViewController.swift in Sources */,
 				1516004B242495FE0003DDCF /* Extensions.swift in Sources */,
+				1516004D24285FCB0003DDCF /* SignUpViewController.swift in Sources */,
+				1516004F24287E450003DDCF /* HomeViewController.swift in Sources */,
+				1516005324287E6F0003DDCF /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

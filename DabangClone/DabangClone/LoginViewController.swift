@@ -59,6 +59,7 @@ class LoginViewController: UIViewController {
     $0.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
     $0.layer.cornerRadius = 4
     $0.backgroundColor = UIColor(named: "PureLoginButtonColor")
+    $0.addTarget(self, action: #selector(didTapPureLoginButton), for: .touchUpInside)
   }
   
   let findPwButton = UIButton(type: .system).then {
@@ -71,6 +72,7 @@ class LoginViewController: UIViewController {
     $0.setTitle("이메일로 회원가입", for: .normal)
     $0.setTitleColor(UIColor.gray, for: .normal)
     $0.backgroundColor = .clear
+    $0.addTarget(self, action: #selector(didTapSignUpUseEmailButton), for: .touchUpInside)
   }
   
   let bottomGrayView = UIView().then {
@@ -96,10 +98,15 @@ class LoginViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
+    self.navigationController?.navigationBar.isHidden = true
     // Do any additional setup after loading the view.
     
     setupUI()
     
+  }
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.navigationController?.navigationBar.isHidden = true
   }
   
   
@@ -219,6 +226,27 @@ class LoginViewController: UIViewController {
     showLoginAlert()
   }
   
+  //MARK: - 자체 로그인
+  @objc private func didTapPureLoginButton() {
+    if emailTextField.text?.validateEmail() == true {
+      print("올바른 이메일")
+      self.navigationController?.popViewController(animated: true)//
+    } else {
+      print("올바르지 않은 이메일")
+    }
+    
+    if pwTextField.text?.validatePassword() == true {
+      print("올바른 패스워드")
+      self.navigationController?.popViewController(animated: true)//
+    } else {
+      print("올바르지 않은 패스워드")
+    }
+  }
+  
+  @objc private func didTapSignUpUseEmailButton() {
+    self.navigationController?.pushViewController(SignUpViewController(), animated: true)
+  }
+  
   //MARK: - KAKAO Login
   @objc private func touchUpLoginButton(_ sender: UIButton) {
     guard let session = KOSession.shared() else {
@@ -244,9 +272,9 @@ class LoginViewController: UIViewController {
           self.postKakaoToken(Token: token.accessToken)
         }
         print("email :", email, " nickname :", nickname)
-        let mainVC = MainViewController()
+        let mainVC = HomeViewController()
         
-        self.present(mainVC, animated: false, completion: nil)
+        self.present(mainVC, animated: false, completion: nil)//
       })
     }
   }
@@ -254,16 +282,18 @@ class LoginViewController: UIViewController {
   func postKakaoToken(Token: String) {
     let kakaoToken = Token
     let param: Parameters = [
-      //            "access_token" : kakaoToken
-      "username" : "admin",
-      "password" : "admin123"
+                  "access_token" : kakaoToken
+//      "username" : "admin",
+//      "password" : "admin123"
     ]
+    
     //        let url = URL(string: "https://moonpeter.com/members/kakaoToken/")
-    let url = URL(string: "https://moonpeter.com/api/token/")
+    let url = URL(string: "https://moonpeter.com/members/kakaoToken/")
     
     AF.request(url!, method: .post, parameters: param, encoding: URLEncoding.httpBody, headers: .none, interceptor: .none).responseString { response in
       print("성공? :", response.result)
       //            let resultString =  response.result
+//      self.navigationController?.popViewController(animated: true)//
     }
     
     
@@ -292,9 +322,8 @@ class LoginViewController: UIViewController {
       } else if(result.grantedPermissions.contains("email")) {
         self.returnUserData()
         self.postFacebookToken(Token: token.tokenString)
-        let mainVC = MainViewController()
         
-        self.present(mainVC, animated: false, completion: nil)
+//        self.navigationController?.popViewController(animated: true)
         //        print(token.appID, token.graphDomain, token.tokenString)
       }
     }

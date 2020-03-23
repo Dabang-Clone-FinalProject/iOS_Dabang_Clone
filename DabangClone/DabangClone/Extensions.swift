@@ -50,3 +50,36 @@ extension UITextField {
   }
 }
 
+extension String {
+  
+  public func validateEmail() -> Bool {
+      let emailRegEx = "^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$"
+      
+      let predicate = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+      return predicate.evaluate(with: self)
+  }
+  
+  // Password validation
+  public func validatePassword() -> Bool {
+      let passwordRegEx = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])(?=.*[$@$!%*#?&]).{8,}$"
+      let predicate = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
+      return predicate.evaluate(with: self)
+  }
+  
+  //MARK: usage
+  /*
+   if emailTextField.text?.validateEmail() == true {
+     print("올바른 이메일")
+   } else {
+     print("올바르지 않은 이메일")
+   }
+   
+   if pwTextField.text?.validatePassword() == true {
+     print("올바른 패스워드")
+   } else {
+     print("올바르지 않은 패스워드")
+   }
+   */
+
+}
+
