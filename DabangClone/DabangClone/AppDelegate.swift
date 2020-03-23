@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     window = UIWindow(frame: UIScreen.main.bounds)
     
-    let loginVC = LoginViewController()
+    let mainVC = MainTabBarViewController()
     
-    window?.rootViewController = loginVC
+    window?.rootViewController = mainVC
     window?.makeKeyAndVisible()
     ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     KOSession.shared()?.isAutomaticPeriodicRefresh = true
