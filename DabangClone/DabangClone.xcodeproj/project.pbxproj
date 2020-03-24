@@ -20,6 +20,10 @@
 		1516005524287ED40003DDCF /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516005424287ED40003DDCF /* SaleViewController.swift */; };
 		1516005724287EDC0003DDCF /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516005624287EDC0003DDCF /* MoreViewController.swift */; };
 		AAD0A9599381D7CA708D6E31 /* Pods_DabangClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B70ED9EB0B15C4D6FEDE4D /* Pods_DabangClone.framework */; };
+		E79D81802429E0770006029E /* RoomGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D817F2429E0770006029E /* RoomGuideViewController.swift */; };
+		E79D81842429E8E50006029E /* RGTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D81832429E8E50006029E /* RGTopTableViewCell.swift */; };
+		E79D81872429EA340006029E /* RGBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D81862429EA340006029E /* RGBodyTableViewCell.swift */; };
+		E79D81892429EA830006029E /* RGBottomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D81882429EA830006029E /* RGBottomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		3AEABCBF869ADF9D5DC4566F /* Pods-DabangClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DabangClone.release.xcconfig"; path = "Target Support Files/Pods-DabangClone/Pods-DabangClone.release.xcconfig"; sourceTree = "<group>"; };
 		90B70ED9EB0B15C4D6FEDE4D /* Pods_DabangClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DabangClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6E307BB0DBA8293AA6779F /* Pods-DabangClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DabangClone.debug.xcconfig"; path = "Target Support Files/Pods-DabangClone/Pods-DabangClone.debug.xcconfig"; sourceTree = "<group>"; };
+		E79D817F2429E0770006029E /* RoomGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGuideViewController.swift; sourceTree = "<group>"; };
+		E79D81832429E8E50006029E /* RGTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGTopTableViewCell.swift; sourceTree = "<group>"; };
+		E79D81862429EA340006029E /* RGBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBodyTableViewCell.swift; sourceTree = "<group>"; };
+		E79D81882429EA830006029E /* RGBottomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBottomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 				1516005024287E620003DDCF /* FavoriteListViewController.swift */,
 				1516003224247BA20003DDCF /* LoginViewController.swift */,
 				1516005224287E6F0003DDCF /* MapViewController.swift */,
+				E79D817F2429E0770006029E /* RoomGuideViewController.swift */,
 				1516005424287ED40003DDCF /* SaleViewController.swift */,
 				1516005624287EDC0003DDCF /* MoreViewController.swift */,
 				15160048242483730003DDCF /* MainTabBarViewController.swift */,
@@ -97,6 +106,7 @@
 				1516004A242495FE0003DDCF /* Extensions.swift */,
 				1516003724247BA20003DDCF /* Assets.xcassets */,
 				1516003C24247BA20003DDCF /* Info.plist */,
+				E79D81852429E8EF0006029E /* Cells */,
 			);
 			path = DabangClone;
 			sourceTree = "<group>";
@@ -108,6 +118,17 @@
 				1516004624247F080003DDCF /* KakaoOpenSDK.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E79D81852429E8EF0006029E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E79D81832429E8E50006029E /* RGTopTableViewCell.swift */,
+				E79D81862429EA340006029E /* RGBodyTableViewCell.swift */,
+				E79D81882429EA830006029E /* RGBottomTableViewCell.swift */,
+			);
+			name = Cells;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,12 +244,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79D81802429E0770006029E /* RoomGuideViewController.swift in Sources */,
 				1516005124287E620003DDCF /* FavoriteListViewController.swift in Sources */,
 				1516003324247BA20003DDCF /* LoginViewController.swift in Sources */,
+				E79D81872429EA340006029E /* RGBodyTableViewCell.swift in Sources */,
 				1516002F24247BA20003DDCF /* AppDelegate.swift in Sources */,
 				15160049242483730003DDCF /* MainTabBarViewController.swift in Sources */,
 				1516005524287ED40003DDCF /* SaleViewController.swift in Sources */,
 				1516005724287EDC0003DDCF /* MoreViewController.swift in Sources */,
+				E79D81842429E8E50006029E /* RGTopTableViewCell.swift in Sources */,
+				E79D81892429EA830006029E /* RGBottomTableViewCell.swift in Sources */,
 				1516004B242495FE0003DDCF /* Extensions.swift in Sources */,
 				1516004D24285FCB0003DDCF /* SignUpViewController.swift in Sources */,
 				1516004F24287E450003DDCF /* HomeViewController.swift in Sources */,
@@ -359,6 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -384,6 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
