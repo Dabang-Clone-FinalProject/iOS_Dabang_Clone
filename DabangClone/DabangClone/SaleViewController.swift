@@ -9,6 +9,7 @@
 import UIKit
 
 class SaleViewController: UIViewController {
+
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -25,5 +26,4 @@ class SaleViewController: UIViewController {
    // Pass the selected object to the new view controller.
    }
    */
-  
 }
