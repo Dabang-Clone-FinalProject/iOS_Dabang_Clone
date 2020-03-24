@@ -1,5 +1,4 @@
 //
-//  HomeViewController.swift
 //  DabangClone
 //
 //  Created by 정의석 on 2020/03/23.
@@ -9,7 +8,6 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
