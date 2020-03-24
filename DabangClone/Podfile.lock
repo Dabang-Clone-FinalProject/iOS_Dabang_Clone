@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.0.0)
+  - Alamofire (5.0.2)
   - FBSDKCoreKit (6.2.0):
     - FBSDKCoreKit/Basics (= 6.2.0)
     - FBSDKCoreKit/Core (= 6.2.0)
@@ -51,7 +51,7 @@ SPEC REPOS:
     - Then
 
 SPEC CHECKSUMS:
-  Alamofire: 58ff2bfb8daaacaa233d5c36e37b10a5248f59b1
+  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
   FBSDKCoreKit: a7bb9f5ac56c1e11d5f8ae0b90a3610f8744b43a
   FBSDKLoginKit: 5877adb09cc249870c352d92ecc3246cb925c771
   FBSDKShareKit: 09ad91955d3a6de171970f2954dc1e955b064899
