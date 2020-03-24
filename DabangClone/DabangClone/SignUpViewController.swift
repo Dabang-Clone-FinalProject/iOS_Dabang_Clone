@@ -4,39 +4,50 @@ import Then
 import Alamofire
 
 class SignUpViewController: UIViewController {
+  
   let nameLabel = UILabel().then {
     $0.text = "이름"
   }
+  
   let emailLabel = UILabel().then {
     $0.text = "이메일"
   }
+  
   let pwLabel = UILabel().then {
     $0.text = "비밀번호"
   }
+  
   let nameTextField = UITextField().then {
     //    $0.layer.borderColor = UIColor.gray.cgColor
     $0.placeholder = "한글 또는 영문만 입력가능"
   }
+  
   let emailTextField = UITextField().then {
     $0.placeholder = "hello@dabangapp.com"
   }
+  
   //  let pwTextField = UITextField().then {
   //    $0.background = UIImage(named: "pwFrame")
   //  }
+  
   let pwImageView = UIImageView().then {
     $0.image = UIImage(named: "pwFrame")
   }
+  
   let pwTopTextField = UITextField().then {
     $0.placeholder = "8자리 이상 영문자, 숫자, 특수문자 포함"
     //    $0.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
   }
+  
   let pwBottomTextField = UITextField().then {
     $0.placeholder = "비밀번호 확인"
     //    $0.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
   }
+  
   let bottomGrayView = UIView().then {
     $0.backgroundColor = UIColor(named: "TextFieldColor")
   }
+  
   let completeButton = UIButton().then {
     $0.setTitle("회원가입 완료", for: .normal)
     $0.setTitleColor(#colorLiteral(red: 0.7097486854, green: 0.7098352313, blue: 0.7097191215, alpha: 1), for: .normal)
@@ -46,6 +57,7 @@ class SignUpViewController: UIViewController {
     $0.backgroundColor = #colorLiteral(red: 0.9951116443, green: 1, blue: 0.9956502318, alpha: 1)
     $0.addTarget(self, action: #selector(didTapCompleteButton), for: .touchUpInside)
   }
+  
   let bottomGuideLabel = UILabel().then {
     $0.text = """
     회원가입에 문제가 있을 시 일반회원 고객센터로 전화해주시면
@@ -56,12 +68,14 @@ class SignUpViewController: UIViewController {
     $0.textAlignment = .center
     $0.font = UIFont.systemFont(ofSize: 14, weight: .light)
   }
+  
   let bottomCallNumLabel = UILabel().then {
     $0.text = "고객센터 02-1899-6840"
     $0.textColor = .gray
     $0.textAlignment = .center
     $0.font = UIFont.systemFont(ofSize: 12, weight: .bold)
   }
+  
   var buttonCheck = false
   //  let pwAlertLabel = UILabel().then {
   //    $0.text = "비밀번호 확인이 동일하지 않습니다."
@@ -89,17 +103,21 @@ class SignUpViewController: UIViewController {
       pwTopTextField,
       pwBottomTextField
     ])
+    
     pwImageView.addSubviews([
     ])
+    
     bottomGrayView.addSubviews([
       bottomGuideLabel,
       bottomCallNumLabel,
       completeButton
     ])
+    
     [nameLabel, emailLabel, pwLabel].forEach {
       $0.textColor = .black
       $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
     }
+    
     [nameTextField, emailTextField].forEach {
       $0.font = UIFont.systemFont(ofSize: 16, weight: .medium)
       $0.layer.borderWidth = 0.6
@@ -108,6 +126,7 @@ class SignUpViewController: UIViewController {
       $0.addLeftPadding()
       $0.delegate = self
     }
+    
     [pwTopTextField, pwBottomTextField].forEach {
       $0.font = UIFont.systemFont(ofSize: 16, weight: .medium)
       //   $0.isSecureTextEntry = true
@@ -214,5 +233,14 @@ extension SignUpViewController: UITextFieldDelegate {
       completeButton.setTitleColor(#colorLiteral(red: 0.7097486854, green: 0.7098352313, blue: 0.7097191215, alpha: 1), for: .normal)
       buttonCheck = false
     }
+    
   }
+}
+
+extension UIButton {
+  func blackBG() -> UIButton {
+    self.backgroundColor = .black
+    return self
+  }
+  
 }

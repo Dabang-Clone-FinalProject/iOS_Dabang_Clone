@@ -17,34 +17,12 @@ extension UIView {
         views.forEach { addSubview($0) }
     }
     
-    func addInnerShadow() {
-        let innerShadow = CALayer()
-        innerShadow.frame = bounds
-        
-        // Shadow path (1pt ring around bounds)
-        let radius = self.frame.size.height/2
-        let path = UIBezierPath(roundedRect: innerShadow.bounds.insetBy(dx: -1, dy:-1), cornerRadius:radius)
-        let cutout = UIBezierPath(roundedRect: innerShadow.bounds, cornerRadius:radius).reversing()
-        
-        
-        path.append(cutout)
-        innerShadow.shadowPath = path.cgPath
-        innerShadow.masksToBounds = true
-        // Shadow properties
-        innerShadow.shadowColor = UIColor.black.cgColor
-        innerShadow.shadowOffset = CGSize(width: 0, height: 3)
-        innerShadow.shadowOpacity = 0.15
-        innerShadow.shadowRadius = 3
-//        innerShadow.cornerRadius = self.frame.size.height/2
-        innerShadow.cornerRadius = 4
-        layer.addSublayer(innerShadow)
-    }
-    
 }
 
+
 extension UITextField {
-  func addLeftPadding() {
-    let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
+  func addLeftPadding(_ width: CGFloat = 10) {
+    let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: self.frame.height))
     self.leftView = paddingView
     self.leftViewMode = ViewMode.always
   }
@@ -66,6 +44,8 @@ extension String {
       return predicate.evaluate(with: self)
   }
   
+ 
+  
   //MARK: usage
   /*
    if emailTextField.text?.validateEmail() == true {
@@ -80,6 +60,55 @@ extension String {
      print("올바르지 않은 패스워드")
    }
    */
-
 }
 
+extension UILabel {
+  
+  func addCharacterSpacing(kernValue: Double = -1) {
+    if let labelText = text, labelText.count > 0 {
+      let attributedString = NSMutableAttributedString(string: labelText)
+      attributedString.addAttribute(NSAttributedString.Key.kern, value: kernValue, range: NSRange(location: 0, length: attributedString.length - 1))
+      attributedText = attributedString
+    }
+  }
+}
+
+extension UIButton {
+  
+  func addCharacterSpacing(kernValue: Double = -1) {
+    if let labelText = self.titleLabel?.text, labelText.count > 0 {
+      let attributedString = NSMutableAttributedString(string: labelText)
+      attributedString.addAttribute(NSAttributedString.Key.kern, value: kernValue, range: NSRange(location: 0, length: attributedString.length - 1))
+      self.titleLabel?.attributedText = attributedString
+    }
+  }
+}
+
+extension NSMutableAttributedString {
+
+    func bold(_ text: String, fontSize: CGFloat) -> NSMutableAttributedString {
+      let attrs: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: fontSize)]
+        self.append(NSMutableAttributedString(string: text, attributes: attrs))
+        return self
+    }
+
+    func normal(_ text: String, fontSize: CGFloat) -> NSMutableAttributedString {
+      let attrs: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: fontSize)]
+        self.append(NSMutableAttributedString(string: text, attributes: attrs))
+        return self
+
+    }
+  
+  func semiBold(_ text: String, fontSize: CGFloat) -> NSMutableAttributedString {
+    let attrs: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: fontSize, weight: .semibold)]
+      self.append(NSMutableAttributedString(string: text, attributes: attrs))
+      return self
+  }
+  
+  func medium(_ text: String, fontSize: CGFloat) -> NSMutableAttributedString {
+    let attrs: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: fontSize, weight: .medium)]
+      self.append(NSMutableAttributedString(string: text, attributes: attrs))
+      return self
+  }
+
+}
