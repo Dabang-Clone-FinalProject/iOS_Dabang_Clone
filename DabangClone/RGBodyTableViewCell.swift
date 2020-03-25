@@ -17,24 +17,24 @@ class RGBodyTableViewCell: UITableViewCell {
   private let firstLine = UILabel().then {
     $0.text = "매매는 방주인에서만 등록하실 수 있습니다."
     $0.textColor = .black
-    $0.font = UIFont.systemFont(ofSize: 14, weight: .light)
+    $0.font = UIFont.systemFont(ofSize: 12, weight: .light)
   }
   private let secondLine = UILabel().then {
     $0.text = "소유중인 공실 매매와 매물등록을 한번에 하고 싶다면"
     $0.textColor = .black
-    $0.font = UIFont.systemFont(ofSize: 14, weight: .light)
+    $0.font = UIFont.systemFont(ofSize: 12, weight: .light)
   }
   private let thirdLine1 = UILabel().then {
     $0.text = """
     "방주인"
     """
     $0.textColor = UIColor(named: "roomGuideTextColor")
-    $0.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+    $0.font = UIFont.systemFont(ofSize: 12, weight: .bold)
   }
   private let thirdLine2 = UILabel().then {
     $0.text = "을 이용해주세요."
     $0.textColor = .black
-    $0.font = UIFont.systemFont(ofSize: 14, weight: .light)
+    $0.font = UIFont.systemFont(ofSize: 12, weight: .light)
   }
   
   private let roomStartButton = UIButton().then {
