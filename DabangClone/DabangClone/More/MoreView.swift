@@ -16,6 +16,9 @@ protocol MoreViewDelegate {
 
 class MoreView: UIView {
   
+  let scrollView = UIScrollView()
+  let contentView = UIView()
+  
   var delegate: MoreViewDelegate?
 
   //MARK: - 프로퍼티
@@ -43,8 +46,8 @@ class MoreView: UIView {
     $0.backgroundColor = .white
     //width = 56
   }
-  let profilePhotoImageView = UIImageView().then {
-    $0.image = UIImage(named: "profileImage")
+  let profilePhotoImageView = UIButton().then {
+    $0.setImage(UIImage(named: "profileImage"), for: .normal)
   }
   let addProfilePhotoImageButton = UIButton().then {
     $0.setImage(UIImage(named: "addProfileImage"), for: .normal)
@@ -116,6 +119,7 @@ class MoreView: UIView {
     $0.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .regular)
     $0.setTitleColor(.black, for: .normal)
     $0.addCharacterSpacing()
+    $0.tag = 5
   }
   
   let eventButton = UIButton().then {
@@ -215,7 +219,7 @@ class MoreView: UIView {
     super.init(frame: frame)
     self.backgroundColor = .white
     
-    setupUI()
+    setupUI(frame: frame)
   }
   
   
@@ -223,22 +227,34 @@ class MoreView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  private func setupUI() {
+  private func setupUI(frame: CGRect) {
     
-    sellRoomButton.addTarget(self, action: #selector(didTapSellRoomButton(_:)), for: .touchUpInside)
-    notibutton.addTarget(self, action: #selector(didTapSellRoomButton(_:)), for: .touchUpInside)
+    sellRoomButton.addTarget(self, action: #selector(didTapPresentingButton(_:)), for: .touchUpInside)
+    notibutton.addTarget(self, action: #selector(didTapPresentingButton(_:)), for: .touchUpInside)
+    frequentlyQuestionsButton.addTarget(self, action: #selector(didTapPresentingButton(_:)), for: .touchUpInside)
     
-    self.addSubviews([userNameLabel, userEmailLabel, fixInfoButton, profilePhotoImageView, addProfilePhotoImageButton, notibutton, notibuttonLabel, sellRoomButton, sellRoomLabel, myReviewButton, myReviewLabel, callMarketButton, callMarketLabel, graybezel, searchRoomNumberButton, frequentlyQuestionsButton, eventButton, noticeButton, oneVsOneQuestionButton, graybezelTwo, termsButton, privacyButton, graybezelVertical, graybezelThree, familyAppLabel, dabangProImageButton, dabangProLabelButton, dabangSnsLabel, dabangFacebookImageButton, dabangFacebookLabelButton, dabangNaverImageButton, dabangNaverLabelButton, lowerGrayView, csTextLabel])
+    contentView.addSubviews([userNameLabel, userEmailLabel, fixInfoButton, profilePhotoImageView, addProfilePhotoImageButton, notibutton, notibuttonLabel, sellRoomButton, sellRoomLabel, myReviewButton, myReviewLabel, callMarketButton, callMarketLabel, graybezel, searchRoomNumberButton, frequentlyQuestionsButton, eventButton, noticeButton, oneVsOneQuestionButton, graybezelTwo, termsButton, privacyButton, graybezelVertical, graybezelThree, familyAppLabel, dabangProImageButton, dabangProLabelButton, dabangSnsLabel, dabangFacebookImageButton, dabangFacebookLabelButton, dabangNaverImageButton, dabangNaverLabelButton, lowerGrayView, csTextLabel])
     
+    scrollView.addSubview(contentView)
+    self.addSubview(scrollView)
     
-    
-    setupConstraints()
+    setupConstraints(frame: frame)
   }
   
-  private func setupConstraints() {
+  private func setupConstraints(frame: CGRect) {
+    
+    scrollView.snp.makeConstraints {
+      $0.edges.equalToSuperview()
+    }
+    
+    contentView.snp.makeConstraints {
+      $0.edges.equalToSuperview()
+      $0.width.equalTo(frame.width)
+      $0.height.equalTo(frame.height - 100)
+    }
     
     userNameLabel.snp.makeConstraints {
-      $0.top.equalToSuperview().offset(65)
+      $0.top.equalToSuperview().offset(35)
       $0.leading.equalToSuperview().offset(15)
     }
     
@@ -423,13 +439,16 @@ class MoreView: UIView {
     }
     
     csTextLabel.snp.makeConstraints {
-      $0.center.equalTo(lowerGrayView)
+      $0.centerX.equalTo(lowerGrayView)
+      $0.top.equalTo(lowerGrayView.snp.top).offset(50)
     }
+    
+    
     
   }
   //MARK: Action
 
-  @objc private func didTapSellRoomButton(_ sender: UIButton) {
+  @objc private func didTapPresentingButton(_ sender: UIButton) {
     print("didtap")
     switch sender.tag {
     case 0:
@@ -437,6 +456,8 @@ class MoreView: UIView {
       print("delegate working")
     case 1:
       delegate?.didTapSellMyRoomButton(MoreViewButtons.알림)
+    case 5:
+      delegate?.didTapSellMyRoomButton(MoreViewButtons.자주묻는질문)
     default:
       break
     }
