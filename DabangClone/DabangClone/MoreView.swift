@@ -51,7 +51,7 @@ class MoreView: UIView {
   }
   
   let notibutton = UIButton().then {
-    $0.setImage(UIImage(named: "알림"), for: .normal)
+    $0.setImage(UIImage(named: "noticeImage"), for: .normal)
     $0.tag = 1
   }
   let notibuttonLabel = UILabel().then {
@@ -61,7 +61,7 @@ class MoreView: UIView {
   }
   
   let sellRoomButton = UIButton().then {
-    $0.setImage(UIImage(named: "방내놓기"), for: .normal)
+    $0.setImage(UIImage(named: "sellRoomImage"), for: .normal)
     $0.tag = 0
   }
   
@@ -72,7 +72,7 @@ class MoreView: UIView {
   }
   
   let myReviewButton = UIButton().then {
-    $0.setImage(UIImage(named: "내가쓴리뷰"), for: .normal)
+    $0.setImage(UIImage(named: "myReviewImage"), for: .normal)
   }
   
   let myReviewLabel = UILabel().then {
@@ -82,7 +82,7 @@ class MoreView: UIView {
   }
   
   let callMarketButton = UIButton().then {
-    $0.setImage(UIImage(named: "연락한부동산"), for: .normal)
+    $0.setImage(UIImage(named: "contactedMarketImage"), for: .normal)
   }
   
   let callMarketLabel = UILabel().then {
