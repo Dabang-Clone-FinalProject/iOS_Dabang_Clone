@@ -31,8 +31,8 @@ class SettingSectionView: UIView {
   private func setupConstraints() {
     titleLabel.snp.makeConstraints {
       $0.leading.equalToSuperview().offset(10)
-      $0.top.equalToSuperview().offset(2)
-      $0.bottom.equalToSuperview().offset(-2)
+      $0.top.equalToSuperview().offset(4)
+      $0.bottom.equalToSuperview().offset(-4)
     }
   }
   

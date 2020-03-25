@@ -1,24 +1,24 @@
 //
-//  MarketingImfomationViewController.swift
+//  PrivacyPolicyViewController.swift
 //  DabangClone
 //
-//  Created by 황정덕 on 2020/03/24.
+//  Created by 황정덕 on 2020/03/25.
 //  Copyright © 2020 pandaman. All rights reserved.
 //
 
 import UIKit
 import WebKit
 import SnapKit
-class MarketingImfomationViewController: UIViewController {
-
+class PrivacyPolicyViewController: UIViewController {
+  
   var webView = WKWebView().then {
-    let myURL = URL(string: "https://pro.dabangapp.com/#/agree-view?seq=12")
+    let myURL = URL(string: "https://pro.dabangapp.com/#/agree-view?seq=4")
     let myRequest = URLRequest(url: myURL!)
     $0.load(myRequest)
   }
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.title = "마케팅 정보 수신 동의"
+    self.title = "개인정보처리방침"
     self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "multiply"), style: .plain, target: self, action: #selector(didTapBackButton(_:)))
     self.navigationItem.leftBarButtonItem?.tintColor = .black
     setupUI()
@@ -43,5 +43,5 @@ class MarketingImfomationViewController: UIViewController {
     }
   }
 }
-extension MarketingImfomationViewController: WKUIDelegate {
+extension PrivacyPolicyViewController: WKUIDelegate {
 }
