@@ -23,6 +23,7 @@ class RoomGuideViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.navigationController?.navigationBar.isHidden = false
     view.backgroundColor = .white
     setupUI()
   }
