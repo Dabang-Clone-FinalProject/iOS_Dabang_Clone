@@ -10,8 +10,14 @@ import UIKit
 import Then
 import SnapKit
 
+protocol MoreViewDelegate {
+  func didTapSellMyRoomButton(_ sender: MoreViewButtons)
+}
+
 class MoreView: UIView {
   
+  var delegate: MoreViewDelegate?
+
   //MARK: - 프로퍼티
   let userName = "PandaMan"
   let userEmail = "user@user.com"
@@ -46,7 +52,7 @@ class MoreView: UIView {
   
   let notibutton = UIButton().then {
     $0.setImage(UIImage(named: "알림"), for: .normal)
-    
+    $0.tag = 1
   }
   let notibuttonLabel = UILabel().then {
     $0.text = "알림"
@@ -56,15 +62,19 @@ class MoreView: UIView {
   
   let sellRoomButton = UIButton().then {
     $0.setImage(UIImage(named: "방내놓기"), for: .normal)
+    $0.tag = 0
   }
+  
   let sellRoomLabel = UILabel().then {
     $0.text = "방내놓기"
     $0.font = UIFont.systemFont(ofSize: 13, weight: .light)
     $0.addCharacterSpacing()
   }
+  
   let myReviewButton = UIButton().then {
     $0.setImage(UIImage(named: "내가쓴리뷰"), for: .normal)
   }
+  
   let myReviewLabel = UILabel().then {
     $0.text = "내가쓴리뷰"
     $0.font = UIFont.systemFont(ofSize: 13, weight: .light)
@@ -74,6 +84,7 @@ class MoreView: UIView {
   let callMarketButton = UIButton().then {
     $0.setImage(UIImage(named: "연락한부동산"), for: .normal)
   }
+  
   let callMarketLabel = UILabel().then {
     $0.text = "연락한부동산"
     $0.font = UIFont.systemFont(ofSize: 13, weight: .light)
@@ -106,16 +117,19 @@ class MoreView: UIView {
     $0.setTitleColor(.black, for: .normal)
     $0.addCharacterSpacing()
   }
+  
   let eventButton = UIButton().then {
     $0.setTitle("이벤트", for: .normal)
     $0.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .regular)
     $0.setTitleColor(.black, for: .normal)
   }
+  
   let noticeButton = UIButton().then {
     $0.setTitle("공지사항", for: .normal)
     $0.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .regular)
     $0.setTitleColor(.black, for: .normal)
   }
+  
   let oneVsOneQuestionButton = UIButton().then {
     $0.setTitle("1:1문의", for: .normal)
     $0.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .regular)
@@ -127,6 +141,7 @@ class MoreView: UIView {
     $0.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .medium)
     $0.setTitleColor(.gray, for: .normal)
   }
+  
   let privacyButton = UIButton().then {
     $0.setTitle("개인정보처리방침", for: .normal)
     $0.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .bold)
@@ -137,43 +152,53 @@ class MoreView: UIView {
     $0.backgroundColor = UIColor(named: "bezelColor")
     $0.frame = CGRect(x: 0, y: 0, width: 0, height: 1)
   }
+  
   let familyAppLabel = UILabel().then {
     $0.textColor = .gray
     $0.text = "패밀리 APP"
     $0.font = UIFont.systemFont(ofSize: 16, weight: .regular)
   }
+  
   let dabangProImageButton = UIButton().then {
     $0.setImage(UIImage(named: "dabangProImage"), for: .normal)
   }
+  
   let dabangProLabelButton = UIButton().then {
     $0.setTitle("다방프로", for: .normal)
     $0.titleLabel?.font = UIFont.systemFont(ofSize: 13.5, weight: .light)
     $0.setTitleColor(.gray, for: .normal)
   }
+  
   let dabangSnsLabel = UILabel().then {
     $0.text = "다방 SNS"
     $0.textColor = .gray
     $0.font = UIFont.systemFont(ofSize: 16, weight: .regular)
   }
+  
   let dabangFacebookImageButton = UIButton().then {
     $0.setImage(UIImage(named: "facebookImage"), for: .normal)
   }
+  
   let dabangFacebookLabelButton = UIButton().then {
     $0.setTitle("페이스북", for: .normal)
     $0.setTitleColor(.gray, for: .normal)
     $0.titleLabel?.font = UIFont.systemFont(ofSize: 13.5, weight: .light)
   }
+  
   let dabangNaverImageButton = UIButton().then {
     $0.setImage(UIImage(named: "naverButtonImage"), for: .normal)
   }
+  
   let dabangNaverLabelButton = UIButton().then {
     $0.setTitle("네이버포스트", for: .normal)
     $0.setTitleColor(.gray, for: .normal)
     $0.titleLabel?.font = UIFont.systemFont(ofSize: 13.5, weight: .light)
   }
+  
   let lowerGrayView = UIView().then {
     $0.backgroundColor = UIColor(named: "TextFieldColor")
   }
+  
   let csTextLabel = UILabel().then {
     $0.attributedText = NSMutableAttributedString().normal("고객센터 ", fontSize: 14).medium("02-1899-6840", fontSize: 14)
     $0.textColor = .gray
@@ -189,6 +214,7 @@ class MoreView: UIView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     self.backgroundColor = .white
+    
     setupUI()
   }
   
@@ -198,6 +224,9 @@ class MoreView: UIView {
   }
   
   private func setupUI() {
+    
+    sellRoomButton.addTarget(self, action: #selector(didTapSellRoomButton(_:)), for: .touchUpInside)
+    notibutton.addTarget(self, action: #selector(didTapSellRoomButton(_:)), for: .touchUpInside)
     
     self.addSubviews([userNameLabel, userEmailLabel, fixInfoButton, profilePhotoImageView, addProfilePhotoImageButton, notibutton, notibuttonLabel, sellRoomButton, sellRoomLabel, myReviewButton, myReviewLabel, callMarketButton, callMarketLabel, graybezel, searchRoomNumberButton, frequentlyQuestionsButton, eventButton, noticeButton, oneVsOneQuestionButton, graybezelTwo, termsButton, privacyButton, graybezelVertical, graybezelThree, familyAppLabel, dabangProImageButton, dabangProLabelButton, dabangSnsLabel, dabangFacebookImageButton, dabangFacebookLabelButton, dabangNaverImageButton, dabangNaverLabelButton, lowerGrayView, csTextLabel])
     
@@ -398,4 +427,22 @@ class MoreView: UIView {
     }
     
   }
+  //MARK: Action
+
+  @objc private func didTapSellRoomButton(_ sender: UIButton) {
+    print("didtap")
+    switch sender.tag {
+    case 0:
+      delegate?.didTapSellMyRoomButton(MoreViewButtons.방내놓기)
+      print("delegate working")
+    case 1:
+      delegate?.didTapSellMyRoomButton(MoreViewButtons.알림)
+    default:
+      break
+    }
+    
+    
+  }
 }
+
+
