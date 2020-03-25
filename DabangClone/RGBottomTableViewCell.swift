@@ -54,10 +54,10 @@ class RGBottomTableViewCell: UITableViewCell {
   private let phoneLogoImage = UIImageView().then {
     $0.image = UIImage(named: "phoneLogo")
   }
-  private let regulationLabel = UILabel().then {
-    $0.text = "매물관리규정"
-    $0.textColor = UIColor(named: "regulationColor")
-    $0.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+  private let regulationLabel = UIButton().then {
+    $0.setTitle("매물관리규정", for: .normal)
+    $0.setTitleColor(UIColor(named: "regulationColor"), for: .normal)
+    $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .regular)
   }
   let bottomCallNumLabel = UILabel().then {
     $0.text = "고객센터 02-1899-6840"
@@ -149,6 +149,7 @@ class RGBottomTableViewCell: UITableViewCell {
     benefitDetailabel3.snp.makeConstraints {
       $0.leading.equalToSuperview().offset(12)
       $0.top.equalTo(benefitDetailabel2.snp.bottom).offset(6)
+      $0.bottom.equalTo(benefitView.snp.bottom).offset(-12)
     }
     serviceButton.snp.makeConstraints {
       $0.centerX.equalToSuperview()
@@ -162,11 +163,11 @@ class RGBottomTableViewCell: UITableViewCell {
     
     regulationLabel.snp.makeConstraints {
       $0.centerX.equalToSuperview()
-      $0.bottom.equalTo(contentView.snp.bottom).offset(-48)
+      $0.bottom.equalTo(contentView.snp.bottom).offset(-44)
     }
     bottomCallNumLabel.snp.makeConstraints {
       $0.centerX.equalToSuperview()
-      $0.top.equalTo(regulationLabel.snp.bottom).offset(8)
+      $0.top.equalTo(regulationLabel.snp.bottom).offset(6)
     }
   }
 }

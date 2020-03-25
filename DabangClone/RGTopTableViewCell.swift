@@ -126,7 +126,7 @@ class RGTopTableViewCell: UITableViewCell {
   private func setupConstraint() {
     
     firstLine1.snp.makeConstraints {
-      $0.leading.equalTo(contentView.snp.leading).offset(20)
+      $0.leading.equalTo(contentView.snp.leading).offset(16)
       $0.top.equalTo(contentView.snp.top).offset(16)
     }
     firstLine2.snp.makeConstraints {
