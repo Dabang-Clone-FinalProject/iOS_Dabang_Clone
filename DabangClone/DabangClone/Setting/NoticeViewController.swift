@@ -31,6 +31,11 @@ class NoticeViewController: UIViewController {
     setupUI()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.navigationController?.navigationBar.isHidden = false
+  }
+  
   //MARK: - SETUP UI
   private func setupUI() {
     self.view.addSubviews([topView,tableView])
