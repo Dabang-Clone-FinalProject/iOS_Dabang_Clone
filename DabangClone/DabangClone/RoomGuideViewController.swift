@@ -23,8 +23,13 @@ class RoomGuideViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     self.navigationController?.navigationBar.isHidden = false
+    tabBarController?.tabBar.isHidden = true
+    
+    navigationItem.title = "방 내놓기 안내"
     view.backgroundColor = .white
+    
     setupUI()
   }
   

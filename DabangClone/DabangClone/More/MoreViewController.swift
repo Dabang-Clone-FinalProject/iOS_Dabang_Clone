@@ -11,6 +11,7 @@ import UIKit
 enum MoreViewButtons {
   case 방내놓기
   case 알림
+  case 자주묻는질문
 }
 
 class MoreViewController: UIViewController {
@@ -19,17 +20,18 @@ class MoreViewController: UIViewController {
   let userName = "PandaMan"
   let userEmail = "user@user.com"
   
-  let moreView = MoreView()
+  
   
   
   //MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    let moreView = MoreView(frame: view.safeAreaLayoutGuide.layoutFrame)
     moreView.delegate = self
     view.backgroundColor = .white
     //      navigationController?.pushViewController(LoginViewController(), animated: true)
     
-    setupUI()
+    setupUI(vc: moreView)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -38,9 +40,9 @@ class MoreViewController: UIViewController {
   }
   
   //MARK: - SetupUI & Constraints
-  private func setupUI() {
-    moreView.frame = view.frame
-    view.addSubview(moreView)
+  private func setupUI(vc: UIView) {
+    
+    view.addSubview(vc)
     setupConstraints()
   }
   
@@ -58,6 +60,11 @@ class MoreViewController: UIViewController {
       self.navigationController?.pushViewController(vc, animated: true)
     case .알림:
       let vc = NoticeViewController()
+      vc.modalPresentationStyle = .fullScreen
+      self.navigationController?.pushViewController(vc, animated: true)
+    case .자주묻는질문:
+      print("Go to 자주묻는질문")
+      let vc = FrequentlyViewController()
       vc.modalPresentationStyle = .fullScreen
       self.navigationController?.pushViewController(vc, animated: true)
     default:
