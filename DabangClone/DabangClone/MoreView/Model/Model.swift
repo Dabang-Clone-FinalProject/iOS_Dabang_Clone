@@ -17,6 +17,13 @@ struct Question {
   
 }
 
+struct RoomMenu {
+  
+  let title: String
+  let menus: [String]?
+  var open = false
+}
+
 
 
 

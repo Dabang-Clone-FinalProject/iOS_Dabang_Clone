@@ -56,10 +56,6 @@ class FrequentlyTableViewCell: UITableViewCell {
   func setupConstraints() {
     
     contentLabel.snp.makeConstraints {
-//      $0.top.equalToSuperview().offset(15)
-//      $0.leading.equalToSuperview().offset(20)
-//      $0.trailing.equalToSuperview().offset(-20)
-      
       $0.edges.equalToSuperview().inset(UIEdgeInsets(top: 15, left: 20, bottom: 15, right: 20))
     }
     
@@ -69,11 +65,6 @@ class FrequentlyTableViewCell: UITableViewCell {
       $0.trailing.equalTo(contentLabel).offset(10)
       $0.bottom.equalTo(contentLabel).offset(10)
     }
-//
-//    contentView.snp.makeConstraints {
-////      $0.top.leading.trailing.equalToSuperview()
-////      $0.bottom.equalTo(contentsView).offset(10)
-//    }
     
     
   }
