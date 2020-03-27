@@ -25,6 +25,17 @@
 		152DD9B8242B4D3400C80E10 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152DD9B7242B4D3400C80E10 /* Model.swift */; };
 		15D9B32A242CA42F00A38A76 /* SellMyRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B329242CA42F00A38A76 /* SellMyRoomViewController.swift */; };
 		15D9B32C242CA44500A38A76 /* SellMyRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B32B242CA44500A38A76 /* SellMyRoomTableViewCell.swift */; };
+		15D9B331242E220700A38A76 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B32F242E220700A38A76 /* WithdrawalViewController.swift */; };
+		15D9B334242E225900A38A76 /* PersonalModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B333242E225900A38A76 /* PersonalModifyViewController.swift */; };
+		15D9B337242E226C00A38A76 /* WBottomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B335242E226C00A38A76 /* WBottomTableViewCell.swift */; };
+		15D9B338242E226C00A38A76 /* WTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B336242E226C00A38A76 /* WTopTableViewCell.swift */; };
+		15D9B33D242E22EB00A38A76 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B339242E22EB00A38A76 /* TermsAndConditionsViewController.swift */; };
+		15D9B33E242E22EB00A38A76 /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B33A242E22EB00A38A76 /* AddRoomViewController.swift */; };
+		15D9B33F242E22EB00A38A76 /* AddPotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B33B242E22EB00A38A76 /* AddPotoViewController.swift */; };
+		15D9B340242E22EB00A38A76 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B33C242E22EB00A38A76 /* PrivacyPolicyViewController.swift */; };
+		15D9B342242E230800A38A76 /* AddRoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B341242E230800A38A76 /* AddRoomCollectionViewCell.swift */; };
+		15D9B345242E232300A38A76 /* AddRoomTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B343242E232300A38A76 /* AddRoomTitleView.swift */; };
+		15D9B346242E232300A38A76 /* AddRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D9B344242E232300A38A76 /* AddRoomView.swift */; };
 		6F41B409242A32D800CACDCE /* SettingSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F41B408242A32D800CACDCE /* SettingSectionView.swift */; };
 		6F41B40B242A383000CACDCE /* MarketingImfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F41B40A242A383000CACDCE /* MarketingImfomationViewController.swift */; };
 		6F41B40D242A389800CACDCE /* MarketingImfomationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F41B40C242A389800CACDCE /* MarketingImfomationTableViewCell.swift */; };
@@ -41,7 +52,6 @@
 		E79D81872429EA340006029E /* RGBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D81862429EA340006029E /* RGBodyTableViewCell.swift */; };
 		E79D81892429EA830006029E /* RGBottomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D81882429EA830006029E /* RGBottomTableViewCell.swift */; };
 		E7ACD430242B360300C5D097 /* InquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACD42F242B360300C5D097 /* InquiryViewController.swift */; };
-		E7ACD432242B38CF00C5D097 /* PersonalModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACD431242B38CF00C5D097 /* PersonalModifyViewController.swift */; };
 		E7ACD434242B392F00C5D097 /* PMTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACD433242B392F00C5D097 /* PMTopTableViewCell.swift */; };
 		E7BB1BEA242B58A000C66B48 /* PMBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB1BE9242B58A000C66B48 /* PMBodyTableViewCell.swift */; };
 		E7BB1BEC242B6F1500C66B48 /* PMBottomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB1BEB242B6F1500C66B48 /* PMBottomTableViewCell.swift */; };
@@ -68,6 +78,17 @@
 		152DD9B7242B4D3400C80E10 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		15D9B329242CA42F00A38A76 /* SellMyRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellMyRoomViewController.swift; sourceTree = "<group>"; };
 		15D9B32B242CA44500A38A76 /* SellMyRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellMyRoomTableViewCell.swift; sourceTree = "<group>"; };
+		15D9B32F242E220700A38A76 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
+		15D9B333242E225900A38A76 /* PersonalModifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalModifyViewController.swift; sourceTree = "<group>"; };
+		15D9B335242E226C00A38A76 /* WBottomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBottomTableViewCell.swift; sourceTree = "<group>"; };
+		15D9B336242E226C00A38A76 /* WTopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTopTableViewCell.swift; sourceTree = "<group>"; };
+		15D9B339242E22EB00A38A76 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
+		15D9B33A242E22EB00A38A76 /* AddRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoomViewController.swift; sourceTree = "<group>"; };
+		15D9B33B242E22EB00A38A76 /* AddPotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPotoViewController.swift; sourceTree = "<group>"; };
+		15D9B33C242E22EB00A38A76 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		15D9B341242E230800A38A76 /* AddRoomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoomCollectionViewCell.swift; sourceTree = "<group>"; };
+		15D9B343242E232300A38A76 /* AddRoomTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoomTitleView.swift; sourceTree = "<group>"; };
+		15D9B344242E232300A38A76 /* AddRoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoomView.swift; sourceTree = "<group>"; };
 		3AEABCBF869ADF9D5DC4566F /* Pods-DabangClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DabangClone.release.xcconfig"; path = "Target Support Files/Pods-DabangClone/Pods-DabangClone.release.xcconfig"; sourceTree = "<group>"; };
 		6F41B408242A32D800CACDCE /* SettingSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionView.swift; sourceTree = "<group>"; };
 		6F41B40A242A383000CACDCE /* MarketingImfomationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketingImfomationViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +107,6 @@
 		E79D81862429EA340006029E /* RGBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBodyTableViewCell.swift; sourceTree = "<group>"; };
 		E79D81882429EA830006029E /* RGBottomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBottomTableViewCell.swift; sourceTree = "<group>"; };
 		E7ACD42F242B360300C5D097 /* InquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryViewController.swift; sourceTree = "<group>"; };
-		E7ACD431242B38CF00C5D097 /* PersonalModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalModifyViewController.swift; sourceTree = "<group>"; };
 		E7ACD433242B392F00C5D097 /* PMTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTopTableViewCell.swift; sourceTree = "<group>"; };
 		E7BB1BE9242B58A000C66B48 /* PMBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMBodyTableViewCell.swift; sourceTree = "<group>"; };
 		E7BB1BEB242B6F1500C66B48 /* PMBottomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMBottomTableViewCell.swift; sourceTree = "<group>"; };
@@ -276,6 +296,8 @@
 				6F41B412242A441C00CACDCE /* NoticeEmptyView.swift */,
 				6F41B408242A32D800CACDCE /* SettingSectionView.swift */,
 				6F41B40E242A38FB00CACDCE /* MarketingImfomationView.swift */,
+				15D9B343242E232300A38A76 /* AddRoomTitleView.swift */,
+				15D9B344242E232300A38A76 /* AddRoomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,7 +305,12 @@
 		15D9B31E242B9FEB00A38A76 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E7ACD431242B38CF00C5D097 /* PersonalModifyViewController.swift */,
+				15D9B33B242E22EB00A38A76 /* AddPotoViewController.swift */,
+				15D9B33A242E22EB00A38A76 /* AddRoomViewController.swift */,
+				15D9B33C242E22EB00A38A76 /* PrivacyPolicyViewController.swift */,
+				15D9B339242E22EB00A38A76 /* TermsAndConditionsViewController.swift */,
+				15D9B333242E225900A38A76 /* PersonalModifyViewController.swift */,
+				15D9B32F242E220700A38A76 /* WithdrawalViewController.swift */,
 				E7ACD42F242B360300C5D097 /* InquiryViewController.swift */,
 				152DD9B1242B3E2400C80E10 /* FrequentlyViewController.swift */,
 				E79D817F2429E0770006029E /* RoomGuideViewController.swift */,
@@ -334,6 +361,9 @@
 		15D9B323242BA10700A38A76 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				15D9B341242E230800A38A76 /* AddRoomCollectionViewCell.swift */,
+				15D9B335242E226C00A38A76 /* WBottomTableViewCell.swift */,
+				15D9B336242E226C00A38A76 /* WTopTableViewCell.swift */,
 				152DD9B5242B3EEA00C80E10 /* FrequentlyTableViewCell.swift */,
 				E79D81832429E8E50006029E /* RGTopTableViewCell.swift */,
 				E79D81862429EA340006029E /* RGBodyTableViewCell.swift */,
@@ -506,8 +536,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D9B334242E225900A38A76 /* PersonalModifyViewController.swift in Sources */,
 				E7ACD430242B360300C5D097 /* InquiryViewController.swift in Sources */,
 				E79D81802429E0770006029E /* RoomGuideViewController.swift in Sources */,
+				15D9B33E242E22EB00A38A76 /* AddRoomViewController.swift in Sources */,
+				15D9B345242E232300A38A76 /* AddRoomTitleView.swift in Sources */,
 				E7ACD434242B392F00C5D097 /* PMTopTableViewCell.swift in Sources */,
 				151600592429E0260003DDCF /* MoreView.swift in Sources */,
 				1516005124287E620003DDCF /* FavoriteListViewController.swift in Sources */,
@@ -516,27 +549,34 @@
 				6F41B40B242A383000CACDCE /* MarketingImfomationViewController.swift in Sources */,
 				6F41B409242A32D800CACDCE /* SettingSectionView.swift in Sources */,
 				E79D81872429EA340006029E /* RGBodyTableViewCell.swift in Sources */,
+				15D9B338242E226C00A38A76 /* WTopTableViewCell.swift in Sources */,
 				152DD9B8242B4D3400C80E10 /* Model.swift in Sources */,
 				1516002F24247BA20003DDCF /* AppDelegate.swift in Sources */,
+				15D9B340242E22EB00A38A76 /* PrivacyPolicyViewController.swift in Sources */,
 				15160049242483730003DDCF /* MainTabBarViewController.swift in Sources */,
 				6F4DECE72429F78E008D77E5 /* SettingViewController.swift in Sources */,
 				6F41B411242A435800CACDCE /* NoticeViewController.swift in Sources */,
 				6F4DECEC242A1585008D77E5 /* SettingTableViewCell.swift in Sources */,
 				1516005524287ED40003DDCF /* SaleViewController.swift in Sources */,
 				152DD9B2242B3E2400C80E10 /* FrequentlyViewController.swift in Sources */,
+				15D9B342242E230800A38A76 /* AddRoomCollectionViewCell.swift in Sources */,
+				15D9B33D242E22EB00A38A76 /* TermsAndConditionsViewController.swift in Sources */,
 				6F41B413242A441C00CACDCE /* NoticeEmptyView.swift in Sources */,
 				152DD9B6242B3EEA00C80E10 /* FrequentlyTableViewCell.swift in Sources */,
 				1516005724287EDC0003DDCF /* MoreViewController.swift in Sources */,
 				E79D81842429E8E50006029E /* RGTopTableViewCell.swift in Sources */,
 				E79D81892429EA830006029E /* RGBottomTableViewCell.swift in Sources */,
-				E7ACD432242B38CF00C5D097 /* PersonalModifyViewController.swift in Sources */,
+				15D9B337242E226C00A38A76 /* WBottomTableViewCell.swift in Sources */,
 				1516004B242495FE0003DDCF /* Extensions.swift in Sources */,
 				1516004D24285FCB0003DDCF /* SignUpViewController.swift in Sources */,
 				1516004F24287E450003DDCF /* HomeViewController.swift in Sources */,
 				15D9B32C242CA44500A38A76 /* SellMyRoomTableViewCell.swift in Sources */,
+				15D9B346242E232300A38A76 /* AddRoomView.swift in Sources */,
 				6F4DECE02429EC69008D77E5 /* NoticeTopView.swift in Sources */,
 				6F41B40D242A389800CACDCE /* MarketingImfomationTableViewCell.swift in Sources */,
+				15D9B33F242E22EB00A38A76 /* AddPotoViewController.swift in Sources */,
 				E7BB1BEA242B58A000C66B48 /* PMBodyTableViewCell.swift in Sources */,
+				15D9B331242E220700A38A76 /* WithdrawalViewController.swift in Sources */,
 				6F41B40F242A38FB00CACDCE /* MarketingImfomationView.swift in Sources */,
 				6F4DECEE242A19A6008D77E5 /* SettingModel.swift in Sources */,
 				1516005324287E6F0003DDCF /* MapViewController.swift in Sources */,

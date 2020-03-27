@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 개인정보변경 뷰
 class PersonalModifyViewController: UIViewController {
   
   // MARK: -Property

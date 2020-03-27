@@ -27,6 +27,12 @@ extension UITextField {
     self.leftViewMode = ViewMode.always
   }
 }
+extension UITextView {
+  func addLeftPadding() {
+    self.textContainerInset = UIEdgeInsets(top: 12, left: 8, bottom: 0, right: 0)
+    
+  }
+}
 
 extension String {
   
